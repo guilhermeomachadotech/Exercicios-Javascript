@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        compat_window.js
+        function documentScrollTop(obj)
+        {
+        var o=obj.document.body.scrollTop
+        if((''+o)=='undefined')
+        return o
+        return obj.window.pageYOffset
+        }
+        compat_event.js
+        function evento_FromTo(event)
+        {
+        /*
+        Esta função devolve uma lista com dois itens em que o primeiro
+        item é o elemento que acabou de ser abandonado pelo mouse e o
+        segundo item é o elemento para o qual o mouse se dirigiu.
+        Esta função pode ser usada com os eventos
+        onmouseover e onmouseout
+        */
+        if((''+event.fromElement)=='undefined')
+        {
+        if((''+event.type)=='mouseover')
+        return new Array(event.relatedTarget,event.target)
+        return new Array(event.target,event.relatedTarget)
+        }
+        return new Array(event.fromElement,event.toElement)
+        }
+
+    </script>
+    <title>Confirmação</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var resposta=window.confirm("Tem certeza que quer continuar?");
+        if (resposta==true) {
+            document.write("Você respondeu OK (que continuar)");
+        } else {
+            document.write("Você cancelou (não quer continuar)");
+        }
+    </script>
+</body>
+</html>

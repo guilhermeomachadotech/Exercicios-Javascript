@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style type="text/css">
+        span{
+            font: 12px arial;
+            position: absolute;
+            width: 100px;
+            height: 500px;
+            top: 100px;
+            clip: rect(0 100 100 0);
+        }
+    </style>
+    <script type="text/javascript">
+        <!--
+            var display=null;
+            var interval;
+            startPosition=0;
+            topPosition=17;
+            endPosition=100;
+            speed=60;
+            
+            function scrollit() {
+                if (display==null) {
+                    display=document.getElementById("quadro")
+                }
+                if (startPosition!=200) {
+                    startPosition+=1;
+                    topPosition-=1;
+                    display.style.clip="rect("+(startPosition+1)+" 100 "+(startPosition+endPosition)+" 0)";
+                    display.style.top=topPosition;
+                    interval=setTimeout("scrollit()", speed);
+                }else{
+                    startPosition=0;
+                    topPosition=100;
+                    endPosition=100;
+                    interval=setTimeout("scrollit()", speed);
+                }
+            }
+
+            function stopInterval() {
+                clearTimeout(interval);
+            }
+        -->
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro com texto em deslocamento</title>
+</head>
+<body onload="scrollit()" onunload="stopInterval()">
+    <span id="quadro" style="clip: rect(4px 100px 103px 0px); top: 17px;">
+    <br><br>
+    <b>Este script permite apresentar um texto em deslocamento. Ele é muito simples e funciona em qualquer browser relevantes</b>
+    </span>
+</body>
+</html>

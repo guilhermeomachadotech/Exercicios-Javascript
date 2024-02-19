@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caracteres de Escape</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //Aqui utilizamos aspa:
+        var texto="Ele leu o \"Auto da Barca do Inferno\" de Gil Vicente.";
+        document.write(texto);
+        document.write("<br>");
+        //Aqui utilizamos apóstrofo:
+        texto='Ele leu o \'Auto da Barca do Inferno\' de Gil Vicente.';
+        document.write(texto);
+        document.write("<br>");
+        //Melhor solução:
+        texto='Ele leu o "Auto da Barca do Inferno" de Gil Vicente.';
+        document.write(texto);
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script type="text/javascript">
+        
+        var msgfield=null
+        var txtsize=0;
+        var maxsize=60;
+
+        function writemsg() {
+            if (msgfield==null) {
+                msgfield=document.getElementById("msg")
+            }
+            if (txtsize<maxsize) {
+                msgfield.style.fontSize=txtsize;
+                txtsize++;
+                timer=setTimeout("writemsg()", 10);
+            }
+        }
+
+        function stopTimer() {
+            clearTimeout(timer);
+        }
+        
+    </script>
+</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto Crescendo</title>
+    
+<body onload="writemsg()" onunload="stopTimer()">
+    <p id="msg" style="font-size: 2px;">Estou crescendo</p>
+</body>
+</html>

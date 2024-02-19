@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script type="text/javascript">
+        <!--
+        move=150;
+        var i=0;
+        var j=0;
+        var timer;
+        var header=null;
+
+        function moveHeader() {
+            if (header==null){
+                header=document.getElementById("h1");
+            }
+            header.style.position="relative";
+            if (i<=move) {
+                header.style.left=i;
+                i++;
+            }else{
+                if (j<=move) {
+                    header.style.top=j;
+                    j++;
+                }else{
+                    if (move>=0) {
+                        header.style.left=move;
+                        header.style.top=move;
+                        move-=1;
+                    }
+                }
+            }
+            timer=setTimeout("moveHeader()",20);
+        }
+        
+        function stopTimer() {
+            clearTimeout(timer);
+        }
+    -->
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito Dinâmico</title>
+</head>
+<body onload="moveHeader()" onunload="stopTimer()">
+    <h1 id="h1" style="left: 5px; position: relative; color: blue;">Cabeçalho em moviemnto</h1>
+</body>
+</html>

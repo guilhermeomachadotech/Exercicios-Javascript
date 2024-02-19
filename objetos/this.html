@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto com utilização do this</title>
+    <script type="text/javascript">
+        <!--
+            function mostrarStringS(o) {
+                //O argumento o é um objeto (nesse caso uma função);
+                var z="O valor da String s pertencente ao objeto que nos foi passado como argumento é: \n\n";
+                alert(z+o.s);
+            }
+
+            function funcao01() {
+                //Declaramos uma variável que pertence a este (this) objeto:
+                this.s="Eu sou a variável s da funcao01() e sou uma string";
+
+                //Agora invocamos a função mostrarStringS() dando como argumento este (this) objeto
+                mostrarStringS(this);
+            }
+
+            function funcao02() {
+                //Declaramos uma variável s que pertence a este (this) objeto:
+                this.s="Eu pertenço a função funcao02() e sou uma string. O meu nome é s.";
+                //A seguir, invocamos a função mostrarStringS() dando como argumento este (this) objeto:
+                mostrarStringS(this);
+            }
+        -->
+    </script>
+</head>
+<body>
+    <p>
+        <b>Nota:</b>
+        Em JavaScript tudo são objetos, funções e variáveis incluídas
+    </p>
+    <form action="javascript:;">
+        Clique nos botões abaixo para executar as funções:<br>
+        <input type="button" value="Executar a funcao01()" onclick="funcao01()">
+        <input type="button" value="Executar a função02()" onclick="funcao02()">
+    </form>
+</body>
+</html>

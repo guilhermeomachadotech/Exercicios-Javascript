@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor Unicode do Caracter</title>
+</head>
+<body>
+    <script type="text/javascript">
+        <!--
+            function toUnicode() {
+                var str=document.getElementById("my-input").value
+                if (str!="") {
+                    var unicode= str.charCodeAt(0);
+                    document.getElementById("unicode").value=unicode;
+                }
+            }    
+        -->
+    </script>
+    <form action="javacript:;">
+        <label for="my-input">Escreva um caracter no campo seguinte</label>
+        <br>
+        <input maxlength="1" onkeyup="toUnicode()" type="text" name="my-input" id="my-input">
+        <hr>
+        <label for="unicode">O código do caracter é:</label>
+        <input type="text" name="unicode" id="unicode" maxlength="1">
+    </form>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array de nomes</title>
+</head>
+<body>
+    <h1>Arrays de Frutas</h1>
+    <script type="text/javascript">
+        <!--
+            var frutas= new Array(6);
+            frutas[0]="Laranja";
+            frutas[1]="Abacaxi";
+            frutas[2]="Mamão";
+            frutas[3]="Kiwi";
+            frutas[4]="Banana";
+            frutas[5]="Melância";
+            
+            for (var i = 0; i < frutas.length; i++) {
+                document.write("Fruta "+(i+1)+": "+frutas[i]);
+                document.write("<br>");
+            }
+        -->
+    </script>
+    <h2>Tabela das frutas</h2>
+    <table>
+        <tr>
+            <td width="140"><b>Ordem Normal</b></td>
+            <td><b>Ordem alfabética</b></td>
+            <td><b>Ordem Inversa</b></td>
+        </tr>
+        <tr>
+            <td>
+                <script type="text/javascript">
+                    <!--
+                        for (var i = 0; i < frutas.length; i++) {
+                            document.write(frutas[i]+"<br>")  ;
+                        }    
+                    -->
+                </script>
+            </td>
+            <td>
+                <script type="text/javascript">
+                    <!--
+                        //Primeiro, invocamos o método sort() para colocar o array de frutas em ordem alfabéltica:
+                        frutas.sort();
+                        for (var i = 0; i < frutas.length; i++) {
+                            document.write(frutas[i]+"<br>");
+                        }
+                    -->
+                </script>
+            </td>
+            <td>
+                <script type="text/javascript">
+                    <!--
+                        //Primeiro, invocamos o método reverse() do array:
+                        frutas.reverse();
+                        for(var i=0; i < frutas.length; i++){
+                            document.write(frutas[i]+"<br>");
+                        }    
+                    -->
+                </script>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

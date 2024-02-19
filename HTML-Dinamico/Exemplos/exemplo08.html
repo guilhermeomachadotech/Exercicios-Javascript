@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script type="text/javascript">
+        <!--
+            var i=1;
+            var myImage;
+            var timer;
+
+            function startTimer() {
+                myImage=docuement.getElementById("imagem");
+                nextMove()
+            }
+
+            function nextMove() {
+                myImage.style.position="relative";
+                myImage.style.left=+i+"px";
+                i++;
+                timer=setTimeout("nextMove()", 100);
+            }
+
+            function stopTimer() {
+                clearTimeout(timer);
+            }
+        -->
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dar movimento na Imagem</title>
+</head>
+<body onload="startTimer()" onunload="stopTimer()">
+    <img id="imagem" src="chai.webp" style="left: 4px; position: relative; height: 32px; width: 32px;"  alt="">
+</body>
+</html>

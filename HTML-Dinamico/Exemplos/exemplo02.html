@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentar uma dica</title>
+</head>
+<body>
+    <script type="text/javascript">
+        <!--
+            function getTip(txt) {
+                document.getElementById("tip").innerHTML=txt;
+            }
+            function reset() {
+                document.getElementById("tip").innerHTML="";
+            }    
+        -->
+    </script>
+    <p>Passe o mouse sobre as seguintes bebidas e você verá suas dicas:</p>
+    <span onmouseover="getTip('Bebida super potente e com extraordinárias propriedades medicinais')" onmouseout="reset()">Bagaceira</span><br>
+    <span onmouseover="getTip('Bebida excelente quando muito diluída em Vodka!')" onmouseout="reset()">Suco de Laranja</span><br><br>
+    <div id="tip"></div>
+</body>
+</html>

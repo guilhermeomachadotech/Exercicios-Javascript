@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de Graus</title>
+</head>
+<body>
+    <script type="text/javascript">
+        <!--
+            function celsiusParaFahrenheit() {
+                var F=parseInt(document.getElementById("celsius").value)*9/5+32;
+                document.getElementById("fahrenheit").value=Math.round(F);
+            }
+
+            function fahrenheitParaCelsius() {
+                var C = (parseInt(document.getElementById("fahrenheit").value)-32)*5/9;
+                document.getElementById("celsius").value=Math.round(C);
+            }
+        -->
+    </script>
+    <p>
+        Escreva em qualquer um dos campos de inserção de texto. Depois de fazer entrar com um valor númerico num dos campos, pressione "Enter" para que ele seja convertido para as unidades do outro campo.
+    </p>
+    <table>
+        <tr>
+            <td>
+                <form action="javascript:celsiusParaFahrenheit()">
+                    <input id="celsius" size="3">Graus Celsius equivalem a
+                </form>
+            </td>
+            <td width="20"></td>
+            <td>
+                <form action="javascript:fahrenheitParaCelsius()">
+                    <input id="fahrenheit" size="3">Graus Fahrenheit
+                </form>
+            </td>
+        </tr>
+    </table>
+    <p>
+        A utilização do método Math.round() é necessária porque queremos valores inteiros para as temperaturas.
+    </p>
+</body>
+</html>

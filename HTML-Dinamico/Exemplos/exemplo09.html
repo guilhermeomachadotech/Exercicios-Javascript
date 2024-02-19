@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script type="text/javascript">
+        <!--
+            var i=0;
+            var txt=new Array("rastroA","rastroB", "rastroC");
+            
+            function cursor(intervalo, event) {
+                var pos=i*8+5;
+                var xpos;
+                var ypos
+                if (intervalo=='primeiro') {
+                    i=0;
+                }
+                if (i==0) {
+                    xpos=event.clientX;
+                    ypos=event.clientY;
+                    document.getElementById(txt[i]).style.visibility="visible";
+                    document.getElementById(txt[i]).style.position="absolute";
+                    document.getElementById(txt[i]).style.left=xpos+5;
+                    document.getElementById(txt[i]).style.top=ypos+5;
+                }else{
+                    document.getElementById(txt[i]).style.visibility="visible";
+                    document.getElementById(txt[i]).style.position="absolute";
+                    document.getElementById(txt[i]).style.left=xpos+pos;
+                    document.getElementById(txt[i]).style.top=ypos+pos;
+                }
+                i++;
+                if (i==txt.length) {
+                    i-=1;
+                }
+                setTimeout("cursor('seguinte')", 10);
+            }
+        -->
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor que deixa Rastro</title>
+</head>
+<body onmouseover="cursor('primeiro', event)">
+    <h1>Mova o cursor neste exemplo </h1>
+    <span id="rastroA" style="visibility: hidden;">W</span>
+    <span id="rastroB" style="visibility: hidden;">3</span>
+    <span id="rastroC" style="visibility: hidden;">C</span>
+    <br><br><br><br>
+</body>
+</html>

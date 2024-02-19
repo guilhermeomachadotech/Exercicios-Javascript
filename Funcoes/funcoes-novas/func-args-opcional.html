@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções com Argumentos opcionais e com omissão</title>
+</head>
+<body>
+    <script type="text/javascript">
+        <!--
+            function colorir(text, sublinhado) {
+                
+                //Caso o parâmetro sublinhado não for definido, devemos atribuir por omissão
+                if ((''+sublinhado) == 'undefined') {
+                   var sublinhado=false;
+                }
+                var s='<span style="color: red;';
+                if (sublinhado) {
+                    s+=' text-decoration: underline;';
+                }
+                s+='">'+text+'<span>';
+                return s;
+            }   
+        -->
+    </script>
+    <p>Os valores devolvidos pela função são:</p>
+    <br>
+    <script type="text/javascript">
+        <!--
+            var s=colorir("Esse texto tem cor vermelha e não está sublinhado", false);
+            document.write(s);
+            document.write("<br>");
+            s=colorir("Esse texto tem cor vermelha e está sublinhado", true);
+            document.write(s+"<br>");
+            //agora omitimos o segundo argumento:
+            s=colorir("Esse texto tem cor vermelha e não está sublinhado");
+            document.write(s);
+        -->
+    </script>
+</body>
+</html>
